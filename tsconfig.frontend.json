@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es6",
+    "outDir": "./src/public/js",  // Output JavaScript files here
+    "rootDir": "./src/views/ts",  // Store your TypeScript files here
+    "moduleResolution": "node",  // Add this line
+    "esModuleInterop": true       // This helps with handling imports/exports
+  },
+  "include": ["src/views/ts/**/*"]
+}
