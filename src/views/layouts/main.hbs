@@ -7,10 +7,14 @@
     <title>BOID | App </title>
   </head>
   <body>
-    <p class="font-bold">
-    {{ message }}
-    </p>
+    <div class="container px-1 mx-auto">
+      {{> header}}
+
+      {{{ body }}}
+    </div>
   </body>
   <script type="module" src="/js/index.js"></script>
-  <script src="./node_modules/preline/dist/preline.js"></script>
+  <script src="/js/preline.js"></script>
+  <!-- Page-Specific Scripts -->
+  {{#each _blocks.pageScripts}}{{{this}}}{{/each}}
 </html>

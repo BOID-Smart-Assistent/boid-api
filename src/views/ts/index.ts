@@ -1,4 +1,6 @@
 import { Authenticate } from 'BOID-model';
+import { setupNavigation } from './navigation';
+import { setupEvents } from './event';
 
 async function Boot() {
   console.log('Booting websocket connection!');
@@ -26,3 +28,29 @@ async function Boot() {
 }
 
 Boot();
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Get the current path from the URL
+  const path = window.location.pathname;
+
+  // Remove 'focus' style from all nav links initially
+  document.querySelectorAll('.nav-link').forEach((link) => {
+    link.classList.remove('text-blue-500'); // Remove any existing focus style
+    link.classList.add('text-gray-600'); // Set default style
+  });
+
+  // Set 'focus' style based on current path
+  if (path === '/presentation') {
+    document
+      .getElementById('presentationNavButton')
+      .classList.add('text-blue-500');
+    document
+      .getElementById('presentationNavButton')
+      .classList.remove('text-gray-600');
+  } else if (path.startsWith('/event')) {
+    document.getElementById('likingNavButton').classList.add('text-blue-500');
+    document
+      .getElementById('likingNavButton')
+      .classList.remove('text-gray-600');
+  }
+});
