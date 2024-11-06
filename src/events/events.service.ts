@@ -28,7 +28,7 @@ export class EventsService {
   }
 
   findAll() {
-    return this.eventRepository.find();
+    return this.eventRepository.find({ relations: { presentation: true } });
   }
 
   findOne(id: number) {
@@ -52,6 +52,9 @@ export class EventsService {
   }
 
   findUser(userId: number) {
-    return this.eventRepository.findBy({ userId });
+    return this.eventRepository.find({
+      relations: { presentation: true },
+      where: { userId },
+    });
   }
 }
