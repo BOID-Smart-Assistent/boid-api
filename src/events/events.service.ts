@@ -50,4 +50,8 @@ export class EventsService {
   remove(id: number) {
     return this.eventRepository.delete(id);
   }
+
+  findUser(userId: number) {
+    return this.eventRepository.findBy({ userId });
+  }
 }
