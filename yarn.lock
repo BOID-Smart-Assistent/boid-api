@@ -1061,6 +1061,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nestjs/axios@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "@nestjs/axios@npm:3.1.2"
+  peerDependencies:
+    "@nestjs/common": ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0
+    axios: ^1.3.1
+    rxjs: ^6.0.0 || ^7.0.0
+  checksum: 10c0/cf81e64cb991a743a2fb88ffd285b571f2c17ec22e10e4f7e3dd16b1945f2c1101d46c51f13ac42f44a9133257f66980e041fadb7c24a9a23352dc60515d6127
+  languageName: node
+  linkType: hard
+
 "@nestjs/cli@npm:^10.0.0":
   version: 10.4.4
   resolution: "@nestjs/cli@npm:10.4.4"
@@ -1116,6 +1127,20 @@ __metadata:
     class-validator:
       optional: true
   checksum: 10c0/4b624893ad55f9fcf8638eca045d09dd091a8be2cd5061988e3a479178f95b9517aaa7c51ce136801d8b87bfe1494cd198dc0a68630bb8bcba100044915736e7
+  languageName: node
+  linkType: hard
+
+"@nestjs/config@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "@nestjs/config@npm:3.3.0"
+  dependencies:
+    dotenv: "npm:16.4.5"
+    dotenv-expand: "npm:10.0.0"
+    lodash: "npm:4.17.21"
+  peerDependencies:
+    "@nestjs/common": ^8.0.0 || ^9.0.0 || ^10.0.0
+    rxjs: ^7.1.0
+  checksum: 10c0/9eb1634b1a0cf4a6892e1b4449344df296d25e886fcc534853b3e3d7cf462eddb8c6cb7dd1339e29b1a6f7451d08a27a98fcbeecc95d906035bbdb81dbc623f9
   languageName: node
   linkType: hard
 
@@ -1209,11 +1234,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/testing@npm:^10.0.0":
-  version: 10.4.1
-  resolution: "@nestjs/testing@npm:10.4.1"
+"@nestjs/testing@npm:^10.4.11":
+  version: 10.4.11
+  resolution: "@nestjs/testing@npm:10.4.11"
   dependencies:
-    tslib: "npm:2.6.3"
+    tslib: "npm:2.7.0"
   peerDependencies:
     "@nestjs/common": ^10.0.0
     "@nestjs/core": ^10.0.0
@@ -1224,7 +1249,7 @@ __metadata:
       optional: true
     "@nestjs/platform-express":
       optional: true
-  checksum: 10c0/3cbd36d578975435fab92e865f7bf19759d60dd065ace7493f38a16369e04fbf164b5f961f47dc1fdd1fe2ab753acd82c5c4b7671adc9e73caf2ae0ea58c7bc6
+  checksum: 10c0/4322020c296f45c12c7dd4aee6e71504884100107e3933e2b5a788be7dae6ebee1516473970b6984f55862ef65b6c2b83d88269278b92132aeb67b2df7f57216
   languageName: node
   linkType: hard
 
@@ -2093,13 +2118,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"BOID-model@https://github.com/BOID-Smart-Assistent/BOID-model.git#v0.0.16":
+"BOID-model@https://github.com/BOID-Smart-Assistent/BOID-model.git#v0.0.25":
   version: 1.0.0
-  resolution: "BOID-model@https://github.com/BOID-Smart-Assistent/BOID-model.git#commit=90a0ebaef180055ad78aada2879dc47af24aab4f"
+  resolution: "BOID-model@https://github.com/BOID-Smart-Assistent/BOID-model.git#commit=16de2d9954efe915414efba8c50651cc3e6f80b0"
   dependencies:
     ts-poet: "npm:^6.9.0"
     ts-proto: "npm:^2.0.2"
-  checksum: 10c0/2f962b71d7223b476bb59dfb12968abcdcee099ef98212641004e1d348fb6f003f9e50d57de91a252478be9cfbb3097438cd362d3e9157577daa2e7cd364da4c
+  checksum: 10c0/d188a91896fe5aea3494075371fd77e9c9758e531b94bf1ea614abe7ebd4a65751324f09dfa700df771e58ed0203e61672d6dae2d7a9479ecf77ffeac0aeef80
   languageName: node
   linkType: hard
 
@@ -2424,6 +2449,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios@npm:^1.7.8":
+  version: 1.7.8
+  resolution: "axios@npm:1.7.8"
+  dependencies:
+    follow-redirects: "npm:^1.15.6"
+    form-data: "npm:^4.0.0"
+    proxy-from-env: "npm:^1.1.0"
+  checksum: 10c0/23ae2d0105aea9170c34ac9b6f30d9b2ab2fa8b1370205d2f7ce98b9f9510ab420148c13359ee837ea5a4bf2fb028ff225bd2fc92052fb0c478c6b4a836e2d5f
+  languageName: node
+  linkType: hard
+
 "babel-jest@npm:^29.7.0":
   version: 29.7.0
   resolution: "babel-jest@npm:29.7.0"
@@ -2559,14 +2595,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "boid-api@workspace:."
   dependencies:
+    "@nestjs/axios": "npm:^3.1.2"
     "@nestjs/cli": "npm:^10.0.0"
     "@nestjs/common": "npm:^10.0.0"
+    "@nestjs/config": "npm:^3.3.0"
     "@nestjs/core": "npm:^10.0.0"
     "@nestjs/mapped-types": "npm:*"
     "@nestjs/platform-express": "npm:^10.4.4"
     "@nestjs/platform-ws": "npm:^10.4.1"
     "@nestjs/schematics": "npm:^10.0.0"
-    "@nestjs/testing": "npm:^10.0.0"
+    "@nestjs/testing": "npm:^10.4.11"
     "@nestjs/typeorm": "npm:^10.0.2"
     "@nestjs/websockets": "npm:^10.4.1"
     "@tailwindcss/forms": "npm:^0.5.9"
@@ -2578,8 +2616,10 @@ __metadata:
     "@types/ws": "npm:^8.5.12"
     "@typescript-eslint/eslint-plugin": "npm:^7.0.0"
     "@typescript-eslint/parser": "npm:^7.0.0"
-    BOID-model: "https://github.com/BOID-Smart-Assistent/BOID-model.git#v0.0.16"
+    BOID-model: "https://github.com/BOID-Smart-Assistent/BOID-model.git#v0.0.25"
     autoprefixer: "npm:^10.4.20"
+    axios: "npm:^1.7.8"
+    class-transformer: "npm:^0.5.1"
     esbuild: "npm:^0.24.0"
     eslint: "npm:^8.42.0"
     eslint-config-prettier: "npm:^9.0.0"
@@ -2594,6 +2634,7 @@ __metadata:
     prettier: "npm:^3.0.0"
     reflect-metadata: "npm:^0.2.0"
     rxjs: "npm:^7.8.1"
+    serpapi: "npm:^2.1.0"
     source-map-support: "npm:^0.5.21"
     supertest: "npm:^7.0.0"
     tailwindcss: "npm:^3.4.13"
@@ -2891,6 +2932,13 @@ __metadata:
   version: 1.3.1
   resolution: "cjs-module-lexer@npm:1.3.1"
   checksum: 10c0/cd98fbf3c7f4272fb0ebf71d08d0c54bc75ce0e30b9d186114e15b4ba791f3d310af65a339eea2a0318599af2818cdd8886d353b43dfab94468f72987397ad16
+  languageName: node
+  linkType: hard
+
+"class-transformer@npm:^0.5.1":
+  version: 0.5.1
+  resolution: "class-transformer@npm:0.5.1"
+  checksum: 10c0/19809914e51c6db42c036166839906420bb60367df14e15f49c45c8c1231bf25ae661ebe94736ee29cc688b77101ef851a8acca299375cc52fc141b64acde18a
   languageName: node
   linkType: hard
 
@@ -3419,7 +3467,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:^16.0.3":
+"dotenv-expand@npm:10.0.0":
+  version: 10.0.0
+  resolution: "dotenv-expand@npm:10.0.0"
+  checksum: 10c0/298f5018e29cfdcb0b5f463ba8e8627749103fbcf6cf81c561119115754ed582deee37b49dfc7253028aaba875ab7aea5fa90e5dac88e511d009ab0e6677924e
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:16.4.5, dotenv@npm:^16.0.3":
   version: 16.4.5
   resolution: "dotenv@npm:16.4.5"
   checksum: 10c0/48d92870076832af0418b13acd6e5a5a3e83bb00df690d9812e94b24aff62b88ade955ac99a05501305b8dc8f1b0ee7638b18493deb6fe93d680e5220936292f
@@ -4136,6 +4191,16 @@ __metadata:
   version: 3.3.1
   resolution: "flatted@npm:3.3.1"
   checksum: 10c0/324166b125ee07d4ca9bcf3a5f98d915d5db4f39d711fba640a3178b959919aae1f7cfd8aabcfef5826ed8aa8a2aa14cc85b2d7d18ff638ddf4ae3df39573eaf
+  languageName: node
+  linkType: hard
+
+"follow-redirects@npm:^1.15.6":
+  version: 1.15.9
+  resolution: "follow-redirects@npm:1.15.9"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: 10c0/5829165bd112c3c0e82be6c15b1a58fa9dcfaede3b3c54697a82fe4a62dd5ae5e8222956b448d2f98e331525f05d00404aba7d696de9e761ef6e42fdc780244f
   languageName: node
   linkType: hard
 
@@ -5730,7 +5795,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.21":
+"lodash@npm:4.17.21, lodash@npm:^4.17.21":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: 10c0/d8cbea072bb08655bb4c989da418994b073a608dffa608b09ac04b43a791b12aeae7cd7ad919aa4c925f33b48490b5cfe6c1f71d827956071dae2e7bb3a6b74c
@@ -6921,6 +6986,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"proxy-from-env@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "proxy-from-env@npm:1.1.0"
+  checksum: 10c0/fe7dd8b1bdbbbea18d1459107729c3e4a2243ca870d26d34c2c1bcd3e4425b7bcc5112362df2d93cc7fb9746f6142b5e272fd1cc5c86ddf8580175186f6ad42b
+  languageName: node
+  linkType: hard
+
 "punycode@npm:^2.1.0":
   version: 2.3.1
   resolution: "punycode@npm:2.3.1"
@@ -7265,6 +7337,13 @@ __metadata:
   dependencies:
     randombytes: "npm:^2.1.0"
   checksum: 10c0/2dd09ef4b65a1289ba24a788b1423a035581bef60817bea1f01eda8e3bda623f86357665fe7ac1b50f6d4f583f97db9615b3f07b2a2e8cbcb75033965f771dd2
+  languageName: node
+  linkType: hard
+
+"serpapi@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "serpapi@npm:2.1.0"
+  checksum: 10c0/0a25449fc65dd5e4675b8b6badf0501bd7e9c31dd32590bd29ae6ed4139d37e878a7dd8065414e2acacfebdda27c71e072ac344df526a41d2760123257283635
   languageName: node
   linkType: hard
 

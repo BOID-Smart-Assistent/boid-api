@@ -1,0 +1,33 @@
+<div class="container mx-auto p-4">
+  <h1 class="text-2xl font-bold mb-4">Schedule Viewer</h1>
+  <button id="generateSchedule" type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-gray-800 text-white hover:bg-gray-900 focus:outline-none focus:bg-gray-900 disabled:opacity-50 disabled:pointer-events-none ">
+    Generate Schedule
+  </button>
+  <!-- Dropdown to select a schedule -->
+  <div class="mb-4">
+    <label for="scheduleDropdown" class="block text-sm font-medium text-gray-700">Select a Schedule:</label>
+    <select id="scheduleDropdown" class="form-select mt-1 block w-full" onchange="renderTimeslots()">
+      <!-- Options will be rendered dynamically -->
+    </select>
+  </div>
+
+  <!-- Timeslot Table -->
+  <div>
+    <h2 class="text-xl font-semibold mb-2">Timeslots</h2>
+    <table class="table-auto w-full border-collapse border border-gray-300">
+      <thead>
+      <tr class="bg-gray-100">
+        <th class="border border-gray-300 px-4 py-2">Date</th>
+        <th class="border border-gray-300 px-4 py-2">Timeslot ID</th>
+        <th class="border border-gray-300 px-4 py-2">Presentations</th>
+      </tr>
+      </thead>
+      <tbody id="timeslotTableBody">
+      <!-- Timeslot rows will be dynamically rendered here -->
+      </tbody>
+    </table>
+  </div>
+</div>
+{{#block "pageScripts"}}
+  <script type="module" src="/js/schedules.js"></script>
+{{/block}}

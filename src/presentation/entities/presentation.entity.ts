@@ -1,5 +1,12 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 import { Event } from '../../events/entities/event.entity';
+import { Timeslot } from '../../timeslots/entities/timeslot.entity';
 
 @Entity()
 export class Presentation {
@@ -14,4 +21,7 @@ export class Presentation {
 
   @OneToMany(() => Event, (event) => event.presentation)
   events: Event[];
+
+  @ManyToOne(() => Timeslot, (timeslot) => timeslot.presentations)
+  timeslot: Timeslot;
 }

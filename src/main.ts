@@ -28,6 +28,9 @@ async function bootstrap() {
           this._blocks[name] = block;
           return null;
         },
+        toJson(data: any) {
+          return JSON.stringify(data);
+        },
       },
     }),
   );
